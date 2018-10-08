@@ -28,7 +28,6 @@
 	&_toggle
 		z-index: 9
 		border: none
-		display: block
 		top: 24px
 		right: 0
 		position: absolute
@@ -39,6 +38,8 @@
 		cursor: pointer
 		width: 26px
 		height: 20px
+		@media only screen and (max-width: 768px)
+			display: block
 		span
 			position: relative
 			display: block
@@ -61,32 +62,33 @@
 			&:after
 				top: 8px
 .js-menu__opened
-	.header__menu
-		display: flex !important
-		position: fixed
-		top: 56px
-		left: 0
-		right: 0
-		background: #fff
-		padding: 40px
-		flex-direction: column
-		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.05)
-		&-item
-			font-size: 18px
-			margin-bottom: 20px
-			text-align: center
-		&_toggle
-			span
-				transform: rotate(180deg)
-				transition: background .3s 0s ease
-				background: transparent
-				&:after, &:before
-					top: 0
-					transition-delay: 0s, .3s
-				&:before
-					transform: rotate(45deg)
-				&:after
-					transform: rotate(-45deg)
+	@media only screen and (max-width: 768px)
+		.header__menu
+			display: flex !important
+			position: fixed
+			top: 56px
+			left: 0
+			right: 0
+			background: #fff
+			padding: 40px
+			flex-direction: column
+			box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.05)
+			&-item
+				font-size: 18px
+				margin-bottom: 20px
+				text-align: center
+			&_toggle
+				span
+					transform: rotate(180deg)
+					transition: background .3s 0s ease
+					background: transparent
+					&:after, &:before
+						top: 0
+						transition-delay: 0s, .3s
+					&:before
+						transform: rotate(45deg)
+					&:after
+						transform: rotate(-45deg)
 .header__menu-item
 	font-family: 'Museo Sans Cyrl 700', Arial, sans-serif
 	font-size: 12px
