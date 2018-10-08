@@ -1,0 +1,140 @@
+.header
+	background: #fff
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.05)
+	z-index: 99
+	@media only screen and (max-width: 768px)
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+.header__nav
+	height: 56px
+	position: relative
+.header__buttons
+	height: 56px
+	@media only screen and (max-width: 768px)
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+		background: #fff
+		justify-content: space-around
+.header__logo
+	width: 67px
+	margin-right: 34px
+.header__menu
+	@media only screen and (max-width: 768px)
+		display: none !important
+	&_toggle
+		z-index: 9
+		border: none
+		display: block
+		top: 24px
+		right: 0
+		position: absolute
+		padding: 0
+		outline: 0
+		outline-offset: 0
+		overflow: visible
+		cursor: pointer
+		width: 26px
+		height: 20px
+		span
+			position: relative
+			display: block
+			margin: auto
+			transition: all .3s ease
+			width: 24px
+			height: 4px
+			background-color: #000
+			backface-visibility: hidden
+			&:after, &:before
+				width: 24px
+				height: 4px
+				background-color: #000
+				backface-visibility: hidden
+				content: ""
+				position: absolute
+				left: 0
+				top: -8px
+				transition: top .3s ease .3s, transform .3s ease 0s
+			&:after
+				top: 8px
+.js-menu__opened
+	.header__menu
+		display: flex !important
+		position: fixed
+		top: 56px
+		left: 0
+		right: 0
+		background: #fff
+		padding: 40px
+		flex-direction: column
+		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.05)
+		&-item
+			font-size: 18px
+			margin-bottom: 20px
+			text-align: center
+		&_toggle
+			span
+				transform: rotate(180deg)
+				transition: background .3s 0s ease
+				background: transparent
+				&:after, &:before
+					top: 0
+					transition-delay: 0s, .3s
+				&:before
+					transform: rotate(45deg)
+				&:after
+					transform: rotate(-45deg)
+.header__menu-item
+	font-family: 'Museo Sans Cyrl 700', Arial, sans-serif
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: 700
+	margin-right: 34px
+	a
+		text-decoration: none
+		color: #000
+		&:hover,&:active
+			color: #ce3a11
+	&:last-child
+		margin-right: 0
+.header__button
+	font-size: 12px
+	color: #000
+	text-decoration: none
+	margin-right: 32px
+	&:last-child
+		margin-right: 0
+	&-icon
+		height: 16px
+		width: 18px
+		margin-right: 7px
+		background-size: contain
+		position: relative
+		sup
+			background: #f8e71c
+			border-radius: 50%
+			background: #f8e71c
+			position: absolute
+			right: -6px
+			top: -6px
+			color: #000
+			height: 15px
+			min-width: 15px
+			text-align: center
+			line-height: 15px
+			font-size: 10px
+			font-family: 'Museo Sans Cyrl 700', Arial, sans-serif
+			font-weight: 700
+.header__favorite
+	.header__button-icon
+		background: url(../img/icon-favorite.svg) center center no-repeat
+.header__location
+	.header__button-icon
+		background: url(../img/icon-location.svg) center center no-repeat
+.header__search
+	color: #9b9b9b
+	.header__button-icon
+		background: url(../img/icon-search.svg) center center no-repeat

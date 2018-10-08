@@ -1,0 +1,103 @@
+.hero
+	background: url(../img/hero.jpg) center center no-repeat
+	background-size: cover
+	@media only screen and (min-device-pixel-ratio: 2)
+		background: url(../img/hero@2x.jpg) center center no-repeat
+	&__h
+		font-size: 50px
+		color: #000
+		margin: 170px 0
+		line-height: 1.22em
+		@media only screen and (max-width: 1280px)
+			font-size: 40px
+			margin: 150px 0
+		@media only screen and (max-width: 768px)
+			font-size: 32px
+			margin: 90px 0
+	&__counter
+		margin-top: 158px
+		padding: 0 60px 0 30px
+		position: relative
+		@media only screen and (max-width: 1280px)
+			margin-top: 76px
+			padding: 0 30px 0 10px
+		@media only screen and (max-width: 768px)
+			margin-top: 0
+			margin-bottom: 86px
+		&:after
+			content: ""
+			display: block
+			border: 16px solid #e4e4e4
+			position: absolute
+			top: -35px
+			right: 0
+			bottom: -50px
+			left: 85px
+			z-index: 1
+		&>div
+			z-index: 2
+			position: relative
+		&-numbers
+			font-family: 'Museo Sans Cyrl 700', Arial, sans-serif
+			font-weight: 700
+			font-size: 100px
+			line-height: 1.22em
+		&-text
+			font-family: 'Museo Sans Cyrl 700', Arial, sans-serif
+			font-weight: 700
+			font-size: 18px
+			line-height: 1.22em
+		&-link
+			font-family: 'Museo Sans Cyrl 700', Arial, sans-serif
+			font-weight: 700
+			font-size: 18px
+			line-height: 1.22em
+			margin-top: 28px
+			a
+				color: #cc3b1f
+				&:active, &:hover
+					color: #A5250D
+					&:after
+						right: -18px
+				&:after
+					content: "\203A"
+					font-family: 'Museo Sans Cyrl 500', Arial, sans-serif
+					font-weight: 500
+					display: inline-block
+					position: relative
+					top: 5px
+					right: -8px
+					font-size: 40px
+	&__blocks
+		&-wrapper
+			background: #fff
+		&-item
+			padding: 50px 30px 50px 60px
+			font-family: 'Museo Sans Cyrl 700', Arial, sans-serif
+			font-weight: 700
+			font-size: 18px
+			line-height: 1.22em
+			@media only screen and (max-width: 768px)
+				padding: 20px
+				flex-direction: column;
+				align-items: center;
+			.hero__icon
+				width: 70px
+				height: 70px
+				border: 2px solid #cc3b1f
+				border-radius: 50%
+				margin-right: 12px
+				flex-shrink: 0
+				@media only screen and (max-width: 768px)
+					margin-bottom: 14px
+				&_robots
+					background: url(../img/icon-robots.svg) center center no-repeat
+				&_single
+					background: url(../img/icon-single.svg) center center no-repeat
+				&_instruments
+					background: url(../img/icon-instruments.svg) center center no-repeat
+				&-text
+					@media only screen and (max-width: 768px)
+						text-align: center
+
+				

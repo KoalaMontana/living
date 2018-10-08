@@ -1,0 +1,33 @@
+header.header
+	.header__container.container
+		.header__row.row
+			.header__col.col.col-12
+				.header__left.box-left
+					nav.header__nav.flex__row
+						a(href="/").header__logo.flex__element
+							img(src="img/logo.svg" alt="living.ru")
+						ul.header__menu.flex__element
+							li.header__menu-item.flex__element
+								a(href="#") Подбор квартиры
+							li.header__menu-item.flex__element
+								a(href="#") Каталог новостроек
+							li.header__menu-item.flex__element
+								a(href="#") Полезное
+						span.header__menu_toggle.display-sml#js-menu-burger
+							span
+				.header__right.box-right
+					.header__buttons.flex__row
+						a.header__button.header__favorite.flex__row(href="#")
+							span.header__button-icon.flex__element
+								sup 2
+							span.header__button-text.flex__element.display-lrg Избранное
+						a.header__button.header__location.flex__row(href="#")
+							span.header__button-icon.flex__element
+							span.header__button-text.flex__element.display-lrg Санкт-Петербург
+						a.header__button.header__search.flex__row(href="#")
+							span.header__button-icon.flex__element
+							span.header__button-text.flex__element.display-lrg Поиск
+						a.header__button.button.header__questions.flex__row(href="#")
+							span.header__button-text.flex__element 
+								span.display-lrg Есть вопросы
+								span ?
